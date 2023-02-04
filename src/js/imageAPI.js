@@ -5,13 +5,13 @@ axios.defaults.baseURL = "https://pixabay.com/api/";
 
 class ImageApi {
     constructor(){
-        this.searhQuery = "";
+        this.searchQuery = "";
     }
 
     async fetchImages() {
         const options = new URLSearchParams({
             key: API_KEY,
-            q: this.searhQuery,
+            q: this.searchQuery,
             image_type: 'photo',
             orientation: 'horizontal',
             safesearh: true,
@@ -21,11 +21,11 @@ class ImageApi {
     }
 
     get _searchQuery(){
-        return this.searhQuery;
+        return this.searchQuery;
     }
 
     set _searchQuery(newQuery){
-        this.searhQuery = newQuery;
+        this.searchQuery = newQuery;
     }
 }
 
