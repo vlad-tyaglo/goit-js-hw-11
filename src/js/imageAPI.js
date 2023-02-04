@@ -11,7 +11,7 @@ class ImageApi {
     async fetchImages() {
         const options = new URLSearchParams({
             key: API_KEY,
-            q: 'cat',
+            q: 'car',
             image_type: 'photo',
             orientation: 'horizontal',
             safesearh: true,
