@@ -15,6 +15,7 @@ async function onFormSubmit(event) {
         return;
     }
 
+    imageApi.searchQuery = searchQuery;
     const {hits, totalHits} = await imageApi.fetchImages();
     renderGalleryMarkUp(hits)
    
