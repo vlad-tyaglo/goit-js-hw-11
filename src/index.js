@@ -9,6 +9,7 @@ refs.form.addEventListener('submit', onFormSubmit);
 
 async function onFormSubmit(event) {
     event.preventDefault();
+    clearGalleryMarkUp();
     const searchQuery = event.target.searchQuery.value.trim();
     if(!searchQuery) {
         Notify.warning('Please, enter the text');
