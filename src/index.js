@@ -18,6 +18,10 @@ async function onFormSubmit(event) {
 
     imageApi.searchQuery = searchQuery;
     const {hits, totalHits} = await imageApi.fetchImages();
+
+    if(hits.length === 0){
+       Notify.failure("We're sorry, but you've reached the end of search results.") 
+    }
     renderGalleryMarkUp(hits)
    
 }
